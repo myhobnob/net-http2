@@ -79,7 +79,7 @@ module NetHttp2
     end
 
     def send_request_data
-      headers = @request.headers
+      headers = @request.headers.sort
       body    = @request.body
 
       if body
